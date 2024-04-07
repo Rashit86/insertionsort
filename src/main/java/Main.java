@@ -19,7 +19,7 @@ public class Main {
         - делаем так, пока всё не будет отсортировано.
         */
 
-        int[] arr = new int[]{4, 8, 2, 6, 0, 1, 5};
+        int[] arr = {4, 8, 2, 6, 0, 1, 5};
         System.out.println(Arrays.toString(sort(arr)));
     }
 
