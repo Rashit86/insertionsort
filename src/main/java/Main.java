@@ -25,20 +25,20 @@ public class Main {
 
     private static int[] sort(int[] arr) {
 
-        int indexOfPreviousSortedElement;
-        int savedFirstUnsortedElement;
+        int indexOfPreviousSorted;
+        int savedFirstUnsorted;
 
-        for (int indexOfFirstUnsortedElement = 1; indexOfFirstUnsortedElement < arr.length; indexOfFirstUnsortedElement++) {
+        for (int indexOfFirstUnsorted = 1; indexOfFirstUnsorted < arr.length; indexOfFirstUnsorted++) {
 
-            savedFirstUnsortedElement = arr[indexOfFirstUnsortedElement];
-            indexOfPreviousSortedElement = indexOfFirstUnsortedElement - 1;
+            indexOfPreviousSorted = indexOfFirstUnsorted - 1;
+            savedFirstUnsorted = arr[indexOfFirstUnsorted];
 
-            while (indexOfPreviousSortedElement >= 0 && savedFirstUnsortedElement < arr[indexOfPreviousSortedElement]) {
-                arr[indexOfPreviousSortedElement + 1] = arr[indexOfPreviousSortedElement];
-                indexOfPreviousSortedElement--;
+            while (indexOfPreviousSorted >= 0 && savedFirstUnsorted < arr[indexOfPreviousSorted]) {
+                arr[indexOfPreviousSorted + 1] = arr[indexOfPreviousSorted];
+                indexOfPreviousSorted--;
             }
 
-            arr[indexOfPreviousSortedElement + 1] = savedFirstUnsortedElement;
+            arr[indexOfPreviousSorted + 1] = savedFirstUnsorted;
         }
 
         return arr;
